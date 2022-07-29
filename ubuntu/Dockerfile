@@ -17,7 +17,7 @@ RUN apt-get install git -y
 
 RUN git clone https://github.com/Phreno/.dotfiles.git /home/root/.dotfiles
 
-WORKDIR /home/root/.dotfiles
+WORKDIR /home/root/.dotfiles/ubuntu
 RUN chown -R root:root ./
 RUN chmod +x ubuntu-setup.sh
 RUN ./ubuntu-setup.sh

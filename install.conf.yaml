@@ -1,10 +1,9 @@
 - clean: []
 
 - link:
-    ~/.oh-my-zsh/custom/my_configs.zsh: my_configs.zsh
-    ~/.vim_runtime/my_configs.vim: my_configs.vim
+    ~/.oh-my-zsh/custom/my_configs.zsh: conf/zsh
+    ~/.vim_runtime/my_configs.vim: conf/vim
     ~/.config/nvim/init.vim:
         create: true
-        path: init.vim
-    ~/.config/nvim/coc-settings.json: coc-settings.json
-
+        path: conf/nvim
+    ~/.config/nvim/coc-settings.json: conf/coc
