@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Développeur ....: K3rn€l_P4n1K
-# Nom ............: build-ubuntu-image
-# Description ....: Construit une image docker ubuntu utilisant la configuration du repository
+# Nom ............: run-ubuntu-image
+# Description ....: Ouvre un bash sur l'image docker
 # Version ........: 1.0
-# Date ...........: Fri Jul 29 22:47:59 CEST 2022
-# Dépendances ....: docker
+# Date ...........: Fri Jul 29 23:22:25 CEST 2022
+# Dépendances ....: Avoir construit l'image docker
 
-# Fonctionnalité .: Construit une image docker
-# Intention ......: Tester le repo et éventuellement dev avec
+# Fonctionnalité .: Une image paramétrée pour le dev
+# Intention ......: Utiliser vim :)
 # Remarque .......: N/A
 
 
@@ -86,13 +86,14 @@ checkFile(){
 # INITIALISATION
 # --------------
 
-USAGE="USAGE: ${SCRIPT_NAME} [nomImage]"
+USAGE="USAGE: ${SCRIPT_NAME} [argOptionnel]"
 
 # Si pas de deuxième argument, on fixe une valeur par default
 nomImage=${1:-"ubuntu-dev-vim"}
+
 
 # -----------
 # TRAITEMENTS
 # -----------
 
-docker build -t "${nomImage}" .
+docker run --rm -it --entrypoint zsh "${nomImage}"
