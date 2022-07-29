@@ -82,18 +82,6 @@ checkFile(){
     fi
 }
 
-# --------------
-# INITIALISATION
-# --------------
-
-USAGE="USAGE: ${SCRIPT_NAME} <argObligatoire> [argOptionnel]"
-
-# Si pas de premier argument, on sors du script en affichant l'usage
-argObligatoire=${1?${USAGE}}
-
-# Si pas de deuxième argument, on fixe une valeur par default
-argOptionnel=${2:-"Valeur par défault"}
-
 
 # -----------
 # TRAITEMENTS
