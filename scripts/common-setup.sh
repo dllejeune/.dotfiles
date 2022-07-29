@@ -93,7 +93,7 @@ cartouche(){
 }
 
 installe_vim_awesome(){
-    cd "${SCRIPT_DIR}"/../vendor/vim-awesome-cli"
+    cd "${SCRIPT_DIR}/../vendor/vim-awesome-cli"
     make install
     cd -
 
@@ -122,6 +122,7 @@ main(){
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
+    installe_vim_awesome
 }
 
 main
