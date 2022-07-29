@@ -6,6 +6,6 @@ apt-get -y install \
     neovim \
     zsh    \
     git    \
-    python3
+    python2.7
 
 ./install
