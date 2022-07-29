@@ -94,5 +94,17 @@ nomImage=${1:-"ubuntu-dev-vim"}
 # -----------
 # TRAITEMENTS
 # -----------
+cartouche(){
+    head -n 33 "${SCRIPT_DIR}/${SCRIPT_NAME}" | grep -v "#!"
+    echo "-------------------------------------------------"
+}
 
-docker build -t "${nomImage}" .
+main(){
+    cartouche
+    cd "${SCRIPT_DIR}"
+    docker build -t "${nomImage}" .
+    cd -
+}
+
+
+main

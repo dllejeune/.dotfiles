@@ -96,4 +96,16 @@ nomImage=${1:-"ubuntu-dev-vim"}
 # TRAITEMENTS
 # -----------
 
-docker run --rm -it --entrypoint zsh "${nomImage}"
+
+cartouche(){
+    head -n 33 "${SCRIPT_DIR}/${SCRIPT_NAME}" | grep -v "#!"
+    echo "-------------------------------------------------"
+}
+
+
+main(){
+    cartouche
+    docker run --rm -it --entrypoint zsh "${nomImage}"
+}
+
+main

@@ -98,3 +98,14 @@ argOptionnel=${2:-"Valeur par défault"}
 # -----------
 # TRAITEMENTS
 # -----------
+
+cartouche(){
+    head -n 33 "${SCRIPT_DIR}/${SCRIPT_NAME}" | grep -v "#!"
+    echo "-------------------------------------------------"
+}
+
+main(){
+    cartouche
+}
+
+main

@@ -85,19 +85,27 @@ checkFile(){
 # -----------
 # TRAITEMENTS
 # -----------
-add-apt-repository ppa: deadsnakes / ppa
+cartouche(){
+    head -n 33 "${SCRIPT_DIR}/${SCRIPT_NAME}" | grep -v "#!"
+    echo "-------------------------------------------------"
+}
 
-apt-get -y install \
-    cmake          \
-    tmux           \
-    neovim         \
-    xclip          \
-    docker         \
-    zsh            \
-    curl           \
-    git            \
-    vim-awesome    \
-    python3.9
+main(){
+    cartouche
+    add-apt-repository ppa: deadsnakes / ppa
+    apt-get -y install \
+        cmake          \
+        tmux           \
+        neovim         \
+        xclip          \
+        docker         \
+        zsh            \
+        curl           \
+        git            \
+        vim-awesome    \
+        python3.9
+    ${SCRIPT_DIR}/../scripts/common-setup.sh
+    ${SCRIPT_DIR}/../install
+}
 
-${SCRIPT_DIR}/../scripts/common-setup.sh
-${SCRIPT_DIR}/../install
+main
