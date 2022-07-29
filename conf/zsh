@@ -74,3 +74,6 @@ alias vz='v ~/.dotfiles/conf/zsh; sz'
 alias docker.arrete_tous_les_containers='docker container stop $(docker container ls -aq)'
 alias docker.supprime_tous_les_containers='docker container rm $(docker container ls -aq)'
 alias docker.supprime_toutes_les_images='docker image rm $ (docker image ls -q)'
+
+alias docker.NETTOIE_TOUT='docker.arrete_tous_les_containers; docker.supprime_tous_les_containers; docker.supprime_toutes_les_images'
+
