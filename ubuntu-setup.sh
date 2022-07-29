@@ -8,6 +8,4 @@ apt-get -y install \
     git    \
     python3.8
 
-alias python='python3'
-
 ./install

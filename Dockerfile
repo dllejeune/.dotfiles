@@ -8,7 +8,7 @@ RUN apt-get install git -y
 RUN useradd -m -s /bin/sh tester
 RUN usermod -aG sudo tester
 RUN echo "tester   ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers
-
+RUN echo "alias python='python3'" >> /home/tester/.bashrc
 
 # Switch testuser
 USER tester
