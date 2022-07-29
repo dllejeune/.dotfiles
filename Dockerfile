@@ -14,8 +14,9 @@ RUN echo "tester   ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers
 USER tester
 ENV HOME /home/tester
 
-WORKDIR /home/tester
 
 RUN git clone https://github.com/Phreno/.dotfiles.git /home/tester/.dotfiles
-RUN chmod +x /home/tester/.dotfiles/ubuntu-setup.sh
-RUN /home/tester/.dotfiles/ubuntu-setup.sh
+
+WORKDIR /home/tester/.dotfiles
+RUN chmod +x ubuntu-setup.sh
+RUN ./ubuntu-setup.sh
