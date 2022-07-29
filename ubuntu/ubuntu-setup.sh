@@ -94,6 +94,7 @@ apt-get -y install \
     xclip  \
     docker \
     zsh    \
+    curl   \
     git    \
     python3.9
 
