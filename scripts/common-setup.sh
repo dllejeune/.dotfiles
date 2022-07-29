@@ -104,6 +104,23 @@ cartouche(){
     echo "-------------------------------------------------"
 }
 
+installe_vim_awesome(){
+    cd "${SCRIPT_DIR}"/../vendor/vim-awesome-cli"
+    make install
+    cd -
+
+    vim-awesome install coc-nvim
+    vim-awesome install coc-java
+    vim-awesome install coc-snippets
+    vim-awesome install coc-tsserver
+    vim-awesome install coc-json
+    vim-awesome install coc-css
+    vim-awesome install coc-yaml
+    vim-awesome install coc-java
+    vim-awesome install coc-sh
+    vim-awesome install coc-tslint
+}
+
 main(){
     cartouche
     # make that damn dirty snake available
@@ -117,16 +134,6 @@ main(){
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-    vim-awesome install coc-nvim
-    vim-awesome install coc-java
-    vim-awesome install coc-snippets
-    vim-awesome install coc-tsserver
-    vim-awesome install coc-json
-    vim-awesome install coc-css
-    vim-awesome install coc-yaml
-    vim-awesome install coc-java
-    vim-awesome install coc-sh
-    vim-awesome install coc-tslint
 }
 
 main

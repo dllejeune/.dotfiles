@@ -102,7 +102,10 @@ main(){
         zsh            \
         curl           \
         git            \
-        vim-awesome    \
+        coreutils      \
+        getopt         \
+        jq             \
+        xdg-utils      \
         python3.9
     ${SCRIPT_DIR}/../scripts/common-setup.sh
     ${SCRIPT_DIR}/../install
