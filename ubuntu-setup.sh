@@ -6,7 +6,7 @@ apt-get -y install \
     neovim \
     zsh    \
     git    \
-    python3.8
+    python3
 
 ln -s /usr/bin/python3 ~/bin/python
 
