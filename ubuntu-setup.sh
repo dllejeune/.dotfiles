@@ -1,10 +1,11 @@
 #!/bin/sh
 
-sudo apt-get -y install cmake \
-    tmux \
+apt-get -y install \
+    cmake  \
+    tmux   \
     neovim \
-    zsh \
-    git \
-    python
+    zsh    \
+    git    \
+    python3
 
-~/.dotfiles/install
+./install
