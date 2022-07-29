@@ -19,4 +19,4 @@ WORKDIR /home/tester
 RUN git clone https://github.com/Phreno/.dotfiles.git /home/tester/.dotfiles
 RUN ls
 RUN chmod u+x ~/.dotfiles/ubuntu-setup.sh
-RUN ~/.dotfiles/ubuntu-setup.sh
+RUN /home/tester/.dotfiles/ubuntu-setup.sh
