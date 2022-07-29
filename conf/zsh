@@ -58,7 +58,10 @@ checkFile(){
     fi
 }
 
+alias vim='nvim'
 alias v='nvim'
-alias vv='v ~/.vim_runtime/my_configs.vim'
-alias vz='v ~/.zshrc; source ~/.zshrc'
+alias vv='v ~/.dotfiles/conf/vim  ; rc'
+alias vn='v ~/.dotfiles/conf/nvim ; rc'
+alias vz='v ~/.dotfiles/conf/zsh  ; rc'
+alias rc='~/.dotfiles/install'
 
