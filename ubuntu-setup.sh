@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 sudo apt-get -y install cmake \
     tmux \
