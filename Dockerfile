@@ -18,5 +18,6 @@ ENV HOME /home/tester
 RUN git clone https://github.com/Phreno/.dotfiles.git /home/tester/.dotfiles
 
 WORKDIR /home/tester/.dotfiles
+RUN chown -R tester:tester ./
 RUN chmod +x ubuntu-setup.sh
 RUN ./ubuntu-setup.sh
