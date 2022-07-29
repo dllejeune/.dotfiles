@@ -12,7 +12,7 @@ apt-get -y install \
 
 # make that damn dirty snake available
 mkdir ${HOME}/bin
-PATH="$HOME/bin:$PATH"
-ln -s /usr/bin/python3 ~/bin/python
+PATH="${HOME}/bin:${PATH}"
+ln -s /usr/bin/python3.9 ${HOME}/bin/python
 
 ./install
