@@ -58,10 +58,20 @@ checkFile(){
     fi
 }
 
+# vim et zsh
 alias vim='nvim'
 alias v='nvim'
-alias vv='v ~/.dotfiles/conf/vim  ; rc'
-alias vn='v ~/.dotfiles/conf/nvim ; rc'
-alias vz='v ~/.dotfiles/conf/zsh  ; rc'
+
+# edition des dotfiles
 alias rc='~/.dotfiles/install'
+alias sz='source ~/.zshrc'
+
+alias vv='v ~/.dotfiles/conf/vim'
+alias vn='v ~/.dotfiles/conf/nvim'
+alias vz='v ~/.dotfiles/conf/zsh; sz'
+
+# docker
+alias docker.arrete_tous_les_containers='docker container stop $(docker container ls -aq)'
+alias docker.supprime_tous_les_containers='docker container rm $(docker container ls -aq)'
+
 

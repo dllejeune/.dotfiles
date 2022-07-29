@@ -9,3 +9,4 @@ nmap <F8> :cn<CR>
 set list
 set listchars=nbsp:␣,trail:•,precedes:«,extends:»
 
+autocmd BufNewFile  *.sh    0r ~/.dotfiles/skeletons/bash-template.sh
