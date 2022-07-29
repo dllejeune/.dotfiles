@@ -102,8 +102,9 @@ main(){
         zsh            \
         curl           \
         git            \
+        pandoc         \
+        gzip           \
         coreutils      \
-        getopt         \
         jq             \
         xdg-utils      \
         python3.9
