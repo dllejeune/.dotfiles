@@ -16,5 +16,5 @@ ENV HOME /home/tester
 
 WORKDIR /home/tester
 
-RUN git clone git@github.com:Phreno/.dotfiles.git
+RUN git clone https://github.com/Phreno/.dotfiles.git
 RUN ./dotfiles/ubuntu-setup.sh
