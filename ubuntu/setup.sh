@@ -73,12 +73,20 @@ displayLog(){
     rm -f "${LOGERR}"
 }
 
-# Vérifie si les fichiers en entrées sont des fichiers valide
+# Vérifie si le fichier existe
 checkFile(){
     file="${1}"
     if [ ! -s "${file}" ]; then
         echo "${file} n'existe pas" >> "${LOGERR}"
         exit 1
+    fi
+}
+
+ensureDir(){
+    file="${1}"
+    if [ ! -d "${file}" ]; then
+        echo "${file} n'existe pas" >> "${LOGERR}"
+        mkdir "${file}"
     fi
 }
 
@@ -91,6 +99,7 @@ cartouche(){
 }
 
 make_damn_dirty_snake_visible(){
+    ensureDir "${HOME}/bin"
     ln -s /usr/bin/python3.9 ${HOME}/bin/python
 }
 

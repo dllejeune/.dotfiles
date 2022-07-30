@@ -73,12 +73,29 @@ displayLog(){
     rm -f "${LOGERR}"
 }
 
-# Vérifie si les fichiers en entrées sont des fichiers valide
-checkFile(){
+# Vérifie si le fichier existe
+assertFile(){
     file="${1}"
     if [ ! -s "${file}" ]; then
         echo "${file} n'existe pas" >> "${LOGERR}"
         exit 1
+    fi
+}
+
+# Vérifie si le dossier existe
+assertDir(){
+    file="${1}"
+    if [ ! -d "${file}" ]; then
+        echo "${file} n'existe pas" >> "${LOGERR}"
+        exit 1
+    fi
+}
+
+ensureDir(){
+    file="${1}"
+    if [ ! -d "${file}" ]; then
+        echo "${file} n'existe pas" >> "${LOGERR}"
+        mkdir "${file}"
     fi
 }
 
