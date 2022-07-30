@@ -152,13 +152,22 @@ cree_bin_perso(){
     PATH="${HOME}/bin:${PATH}"
 }
 
+installe_coc(){
+    cd "${HOME}/.local/share/nvim/site/pack/vim-awesome/start/coc-nvim"
+    npx yarn install
+    cd -
+}
+
 main(){
     cartouche
     actualise_dependances
     cree_bin_perso
-    installe_vimrc
     installe_node
+
+    installe_vimrc
     installe_vim_awesome
+    installe_coc
+
     installe_ohmyzsh
 }
 
