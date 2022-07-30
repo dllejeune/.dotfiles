@@ -95,6 +95,7 @@ main(){
     # add-apt-repository ppa: deadsnakes / ppa
     pacman -S --noconfirm \
         cmake          \
+        make           \
         tmux           \
         neovim         \
         xclip          \
@@ -107,7 +108,7 @@ main(){
         coreutils      \
         jq             \
         xdg-utils      \
-        python3.9
+        python
     ${SCRIPT_DIR}/../scripts/common-setup.sh
     ${SCRIPT_DIR}/../install
 }
