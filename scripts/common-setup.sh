@@ -86,15 +86,6 @@ installe_vim_awesome(){
     make install
     cd -
 
-    vim-awesome install coc-nvim
-    vim-awesome install coc-java
-    vim-awesome install coc-snippets
-    vim-awesome install coc-tsserver
-    vim-awesome install coc-json
-    vim-awesome install coc-css
-    vim-awesome install coc-yaml
-    vim-awesome install coc-sh
-    vim-awesome install coc-tslint
 }
 
 installe_node(){

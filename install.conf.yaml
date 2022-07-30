@@ -7,3 +7,10 @@
         create: true
         path: conf/nvim
     ~/.config/nvim/coc-settings.json: conf/coc
+
+- shell:
+  - vim-awesome install the-nerd-commenter
+  - vim-awesome install coc-nvim
+  - vim-awesome install vimwiki
+  - vim-awesome install vim-airline
+  - vim-awesome install vim-indent-guides
