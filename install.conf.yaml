@@ -1,4 +1,4 @@
-- clean: []
+- clean: [ '~/.oh-my-zsh/custom/my_configs.zsh', '~/.vim_runtime/my_configs.vim', '~/.config/nvim/init.vim', '~/.config/nvim/coc-settings.json' ]
 
 - link:
     ~/.oh-my-zsh/custom/my_configs.zsh: conf/zsh
