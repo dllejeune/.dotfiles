@@ -156,10 +156,10 @@ main(){
     cartouche
     actualise_dependances
     cree_bin_perso
-    installe_ohmyzsh
     installe_vimrc
     installe_node
     installe_vim_awesome
+    installe_ohmyzsh
 }
 
 main
