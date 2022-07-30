@@ -152,10 +152,6 @@ cree_bin_perso(){
     PATH="${HOME}/bin:${PATH}"
 }
 
-compile_coc(){
-
-}
-
 main(){
     cartouche
     actualise_dependances
