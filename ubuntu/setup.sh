@@ -99,6 +99,7 @@ main(){
     apt-get -y install \
         cmake          \
         tmux           \
+        apt-utils      \
         neovim         \
         xclip          \
         docker         \
