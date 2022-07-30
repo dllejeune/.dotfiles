@@ -85,7 +85,7 @@ checkFile(){
 ensureDir(){
     file="${1}"
     if [ ! -d "${file}" ]; then
-        echo "${file} n'existe pas" >> "${LOGERR}"
+        echo "${file} n'existe pas, création du dossier manquant"
         mkdir "${file}"
     fi
 }
