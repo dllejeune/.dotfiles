@@ -94,7 +94,7 @@ assertDir(){
 ensureDir(){
     file="${1}"
     if [ ! -d "${file}" ]; then
-        echo "${file} n'existe pas" >> "${LOGERR}"
+        echo "${file} n'existe pas"
         mkdir "${file}"
     fi
 }
@@ -150,6 +150,10 @@ actualise_dependances(){
 cree_bin_perso(){
     ensureDir ${HOME}/bin
     PATH="${HOME}/bin:${PATH}"
+}
+
+cree_repertoire_de_travail(){
+    ensureDir ${HOME}/workspace
 }
 
 installe_coc(){
