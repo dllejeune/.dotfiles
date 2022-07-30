@@ -2,8 +2,8 @@ FROM archlinux:latest
 
 # Installing minimum deps
 
-RUN packman -Syu
-RUN packman -S git
+RUN pacman -Syu
+RUN pacman -S git
 
 RUN git clone https://github.com/Phreno/.dotfiles.git /home/root/.dotfiles
 
