@@ -107,6 +107,7 @@ main(){
     cartouche
     apt-get -y install \
         cmake          \
+        yarn           \
         tmux           \
         apt-utils      \
         neovim         \

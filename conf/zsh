@@ -72,6 +72,12 @@ alias vz='v ~/.dotfiles/conf/zsh; sz'
 
 alias c.='cd ~/.dotfiles'
 alias v.='c.; v; cd -'
+
+# node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # docker
 alias docker.arrete_tous_les_containers='docker container stop $(docker container ls -aq)'
 alias docker.supprime_tous_les_containers='docker container rm $(docker container ls -q)'
