@@ -93,7 +93,7 @@ cartouche(){
 main(){
     cartouche
     # add-apt-repository ppa: deadsnakes / ppa
-    pacman -S \
+    pacman -S --noconfirm \
         cmake          \
         tmux           \
         neovim         \
