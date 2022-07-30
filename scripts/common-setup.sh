@@ -44,34 +44,6 @@ SCRIPT_NAME="$( basename ${0} )"
 # Dossier du script
 SCRIPT_DIR="$( dirname ${0} )"
 
-# Fichier de log des erreurs
-LOGERR="${SCRIPT_NAME}.err.log"
-
-# ---------
-# FONCTIONS
-# ---------
-
-# Exécutée lors de la sortie du script (CTRL+C par exemple)
-onExit(){
-    displayLog
-}
-trap onExit EXIT
-
-
-# Exécutée lors d'une erreur
-onError(){
-    echo ".. ERR: dans le script ${SCRIPT_NAME}" >> ${LOGERR}
-}
-trap onError ERR
-
-# Affiche les logs le cas échéant
-displayLog(){
-    if [ -s "${LOGERR}" ]; then
-        echo ".. ERR: Sortie du script ${SCRIPT_NAME}"
-        cat "${LOGERR}"
-    fi
-    rm -f "${LOGERR}"
-}
 
 # Vérifie si le fichier existe
 assertFile(){
@@ -162,6 +134,10 @@ installe_coc(){
     cd -
 }
 
+installe_copilot(){
+    git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
+}
+
 installe_sdkman(){
     curl -s "https://get.sdkman.io" | bash
 }
@@ -175,6 +151,7 @@ main(){
 
     installe_vimrc
     installe_vim_awesome
+    installe_copilot
     installe_coc
 
     installe_ohmyzsh
