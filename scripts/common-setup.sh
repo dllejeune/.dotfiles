@@ -104,7 +104,6 @@ installe_vim_awesome(){
     vim-awesome install coc-json
     vim-awesome install coc-css
     vim-awesome install coc-yaml
-    vim-awesome install coc-java
     vim-awesome install coc-sh
     vim-awesome install coc-tslint
 }
