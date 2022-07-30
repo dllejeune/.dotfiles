@@ -162,6 +162,10 @@ installe_coc(){
     cd -
 }
 
+installe_sdkman(){
+    curl -s "https://get.sdkman.io" | bash
+}
+
 main(){
     cartouche
     actualise_dependances
@@ -174,6 +178,7 @@ main(){
     installe_coc
 
     installe_ohmyzsh
+    installe_sdkman
 }
 
 main

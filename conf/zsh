@@ -96,3 +96,6 @@ docker.status(){
     echo "containers"
     docker container ls
 }
+
+# sdkman
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
