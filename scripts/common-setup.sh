@@ -108,19 +108,36 @@ installe_vim_awesome(){
     vim-awesome install coc-tslint
 }
 
-main(){
-    cartouche
-    # make that damn dirty snake available
-    mkdir ${HOME}/bin
-    PATH="${HOME}/bin:${PATH}"
-    ln -s /usr/bin/python3.9 ${HOME}/bin/python
+installe_node(){
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    nvm install node
+    nvm use node
+}
 
-    git submodule update --init --recursive
+installe_vimrc(){
     git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
     sh ${HOME}/.vim_runtime/install_awesome_vimrc.sh
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+}
 
+installe_ohmyzsh(){
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+}
+
+actualise_dependances(){
+    git submodule update --init --recursive
+}
+
+cree_bin_perso(){
+    mkdir ${HOME}/bin
+    PATH="${HOME}/bin:${PATH}"
+}
+
+main(){
+    cartouche
+    cree_bin_perso
+    installe_ohmyzsh
+    installe_vimrc
+    installe_node
     installe_vim_awesome
 }
 

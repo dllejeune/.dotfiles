@@ -90,9 +90,12 @@ cartouche(){
     echo "-------------------------------------------------"
 }
 
+make_damn_dirty_snake_visible(){
+    ln -s /usr/bin/python3.9 ${HOME}/bin/python
+}
+
 main(){
     cartouche
-    # add-apt-repository ppa: deadsnakes / ppa
     apt-get -y install \
         cmake          \
         tmux           \
@@ -108,6 +111,8 @@ main(){
         jq             \
         xdg-utils      \
         python3.9
+
+    make_damn_dirty_snake_visible
     ${SCRIPT_DIR}/../scripts/common-setup.sh
     ${SCRIPT_DIR}/../install
 }
