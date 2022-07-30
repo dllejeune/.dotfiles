@@ -92,7 +92,7 @@ cartouche(){
 
 main(){
     cartouche
-    add-apt-repository ppa: deadsnakes / ppa
+    # add-apt-repository ppa: deadsnakes / ppa
     apt-get -y install \
         cmake          \
         tmux           \
