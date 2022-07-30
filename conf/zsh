@@ -77,3 +77,14 @@ alias docker.supprime_toutes_les_images='docker image rm $(docker image ls -q)'
 
 alias docker.NETTOIE_TOUT='docker.arrete_tous_les_containers; docker.supprime_tous_les_containers; docker.supprime_toutes_les_images'
 
+docker.status(){
+    echo
+    echo "volumes"
+    docker volume ls
+    echo
+    echo "images"
+    docker image ls
+    echo
+    echo "containers"
+    docker container ls
+}
