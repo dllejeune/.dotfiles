@@ -154,6 +154,7 @@ cree_bin_perso(){
 
 main(){
     cartouche
+    actualise_dependances
     cree_bin_perso
     installe_ohmyzsh
     installe_vimrc
