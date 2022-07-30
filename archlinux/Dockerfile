@@ -11,3 +11,4 @@ WORKDIR /home/root/.dotfiles/archlinux
 RUN chown -R root:root ./
 RUN chmod +x setup.sh
 RUN ./setup.sh
+WORKDIR /root

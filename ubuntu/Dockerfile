@@ -10,3 +10,4 @@ WORKDIR /root/.dotfiles/ubuntu
 RUN chown -R root:root ./
 RUN chmod +x setup.sh
 RUN ./setup.sh
+WORKDIR /root
