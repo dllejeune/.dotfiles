@@ -165,6 +165,7 @@ installe_coc(){
 main(){
     cartouche
     actualise_dependances
+    cree_repertoire_de_travail
     cree_bin_perso
     installe_node
 
