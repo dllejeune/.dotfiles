@@ -9,6 +9,7 @@
     ~/.config/nvim/coc-settings.json: conf/coc
 
 - shell:
+  - vim-awesome clear
   - vim-awesome install the-nerd-commenter
   - vim-awesome install coc-nvim
   - vim-awesome install vimwiki
