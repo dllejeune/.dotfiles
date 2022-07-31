@@ -67,6 +67,7 @@ alias rc='~/.dotfiles/install'
 alias sz='source ~/.zshrc'
 
 alias vv='v ~/.dotfiles/conf/vim'
+alias vvrc='cd ~/.vim_runtime/vimrcs; v; cd -'
 alias vn='v ~/.dotfiles/conf/nvim'
 alias vz='v ~/.dotfiles/conf/zsh; sz'
 alias vc='v ~/.dotfiles/install.conf.yaml'

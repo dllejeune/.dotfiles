@@ -13,4 +13,6 @@
   - vim-awesome install coc-nvim
   - vim-awesome install vimwiki
   - vim-awesome install vim-airline
-  - vim-awesome install vim-indent-guides
+  - vim-awesome install vim-hardtime
+  - vim-awesome install vim-argwrap
+  - vim-awesome install sideways-vim

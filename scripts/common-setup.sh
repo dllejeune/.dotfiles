@@ -133,12 +133,17 @@ installe_sdkman(){
     curl -s "https://get.sdkman.io" | bash
 }
 
+installe_standard(){
+    npm install -g standard
+}
+
 main(){
     cartouche
     actualise_dependances
     cree_repertoire_de_travail
     cree_bin_perso
     installe_node
+    installe_standard
 
     installe_vimrc
     installe_vim_awesome
