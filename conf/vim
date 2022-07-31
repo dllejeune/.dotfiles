@@ -16,7 +16,7 @@ autocmd   BufNewFile      LICENSE.md                 0r   ~/.dotfiles/skeletons/
 autocmd   BufNewFile      *.p5js.html                0r   ~/.dotfiles/skeletons/p5js-standalone.html
 autocmd   BufNewFile      *.p5js.js                  0r   ~/.dotfiles/skeletons/p5js-sample.js
 
-colorscheme desert
+colorscheme slate
 
 augroup fmt
   autocmd!
