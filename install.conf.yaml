@@ -19,3 +19,5 @@
   - vim-awesome install vim-hardtime
   - vim-awesome install vim-argwrap
   - vim-awesome install sideways-vim
+  - vim-awesome install vim-fahrenheit
+  - vim-awesome install desert256-vim
