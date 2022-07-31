@@ -73,6 +73,15 @@ alias vz='v ~/.dotfiles/conf/zsh; sz'
 alias vc='v ~/.dotfiles/install.conf.yaml'
 alias c.='cd ~/.dotfiles'
 alias v.='c.; v; cd -'
+alias c.va='cat install.conf.yaml | grep vim-awesome | sed "s/^\s*-\s\(\S\+\|-\)\s\S\+//" | tr -d " " | egrep -v "^$"'
+function c.va.td(){
+    installed=`mktemp`
+    wanted=`mktemp`
+    vim-awesome search -i | sort | uniq > ${installed}
+    c.va | sort | uniq > ${wanted}
+    comm -3 ${installed} ${wanted}
+}
+alias c.va.DEL='c.va.td | xargs -n1 vim-awesome uninstall'
 
 # node
 export NVM_DIR="$HOME/.nvm"
@@ -86,7 +95,7 @@ alias docker.supprime_toutes_les_images='docker image rm $(docker image ls -q)'
 
 alias docker.NETTOIE_TOUT='docker.arrete_tous_les_containers; docker.supprime_tous_les_containers; docker.supprime_toutes_les_images'
 
-docker.status(){
+docker.status(){ # TODO: faire un script avec bash simple curses 
     echo
     echo "volumes"
     docker volume ls

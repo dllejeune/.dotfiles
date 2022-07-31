@@ -9,7 +9,9 @@
     ~/.config/nvim/coc-settings.json: conf/coc
 
 - shell:
-  - vim-awesome clear
+  - c.va.DEL # Supprime tous les plugins vim-awesome non listés ici
+  - vim-awesome clear # Supprime le cache non utilisé vim-awesome
+  - vim-awesome install neoformat
   - vim-awesome install the-nerd-commenter
   - vim-awesome install coc-nvim
   - vim-awesome install vimwiki
