@@ -13,6 +13,7 @@ alias v='nvim'
 alias rc='~/.dotfiles/install'
 alias sz='source ~/.zshrc'
 
+alias l.va='lynx http://github.com/amix/vimrc -dump'
 alias vv='v ~/.dotfiles/conf/vim'
 alias vvrc='cd ~/.vim_runtime/vimrcs; v; cd -'
 alias cvrc='cd ~/.vim_runtime/vimrcs'
@@ -21,7 +22,7 @@ alias vz='v ~/.dotfiles/conf/zsh; sz'
 alias vc='v ~/.dotfiles/install.conf.yaml'
 alias c.='cd ~/.dotfiles'
 alias v.='c.; v; cd -'
-alias c.va='cat install.conf.yaml | grep vim-awesome | sed "s/^\s*-\s\(\S\+\|-\)\s\S\+//" | tr -d " " | egrep -v "^$"'
+alias c.va='cat ~/.dotfiles/install.conf.yaml | egrep "vim-awesome.*install" | sed "s/^\s*-\s\(\S\+\|-\)\s\S\+//" | tr -d " " | egrep -v "^$"'
 alias al='cat ~/.dotfiles/conf/zsh | grep alias | column -t -s = | sort'
 function c.va.td(){
     installed=`mktemp`
@@ -58,3 +59,4 @@ docker.status(){ # TODO: faire un script avec bash simple curses
 
 # sdkman
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+

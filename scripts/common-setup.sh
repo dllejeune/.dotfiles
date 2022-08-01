@@ -137,6 +137,13 @@ installe_standard(){
     npm install -g standard
 }
 
+installe_tspreed(){
+    git clone https://github.com/n-ivkovic/tspreed ~/.dotfiles/vendor/tspreed
+    cd ~/.dotfiles.vendor.tspreed
+    make install
+    cd -
+}
+
 main(){
     cartouche
     actualise_dependances
