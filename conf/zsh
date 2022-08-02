@@ -56,7 +56,11 @@ docker.status(){ # TODO: faire un script avec bash simple curses
     echo "containers"
     docker container ls
 }
-
+installe_chrysalis(){
+    wget  https://github.com/keyboardio/Chrysalis/releases/download/v0.11.0/Chrysalis-0.11.0.AppImage -O ~/bin/chrysalis
+    chmod +x ~/bin/chrysalis
+}
 # sdkman
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
+PATH="$HOME/bin:$PATH"
