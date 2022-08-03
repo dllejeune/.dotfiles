@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Installing minimum deps
-RUN apt-get -qq update
+RUN apt-get -qq update && apt-get install -y apt-transport-https
 RUN apt-get install git -y
 
 RUN git clone https://github.com/Phreno/.dotfiles.git /root/.dotfiles

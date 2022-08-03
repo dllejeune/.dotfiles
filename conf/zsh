@@ -6,24 +6,32 @@
 # Version ........: 1.0
 # Date ...........: Fri Jul 29 21:31:48 CEST 2022
 # Dépendances ....: zsh
+ZSH_DISABLE_COMPFIX=true
+
+DOT_PATH="${HOME}/git/github.com/dllejeune/.dotfiles"
+
 alias vim='nvim'
 alias v='nvim'
-
+alias n='nano'
 # edition des dotfiles
-alias rc='~/.dotfiles/install'
+alias rc='${DOT_PATH}/install'
 alias sz='source ~/.zshrc'
 
 alias l.va='lynx http://github.com/amix/vimrc -dump'
-alias vv='v ~/.dotfiles/conf/vim'
+alias vv='v ${DOT_PATH}/conf/vim'
 alias vvrc='cd ~/.vim_runtime/vimrcs; v; cd -'
 alias cvrc='cd ~/.vim_runtime/vimrcs'
-alias vn='v ~/.dotfiles/conf/nvim'
-alias vz='v ~/.dotfiles/conf/zsh; sz'
-alias vc='v ~/.dotfiles/install.conf.yaml'
-alias c.='cd ~/.dotfiles'
+alias vn='v ${DOT_PATH}/conf/nvim'
+alias vz='v ${DOT_PATH}/conf/zsh; sz'
+alias vc='v ${DOT_PATH}/install.conf.yaml'
+alias c.='cd ${DOT_PATH}'
 alias v.='c.; v; cd -'
-alias c.va='cat ~/.dotfiles/install.conf.yaml | egrep "vim-awesome.*install" | sed "s/^\s*-\s\(\S\+\|-\)\s\S\+//" | tr -d " " | egrep -v "^$"'
-alias al='cat ~/.dotfiles/conf/zsh | grep alias | column -t -s = | sort'
+alias c.va='cat ${DOT_PATH}/install.conf.yaml | egrep "vim-awesome.*install" | sed "s/^\s*-\s\(\S\+\|-\)\s\S\+//" | tr -d " " | egrep -v "^$"'
+alias al='cat ${DOT_PATH}/conf/zsh | grep alias | column -t -s = | sort'
+
+alias nz='n ${DOT_PATH}/conf/zsh; sz'
+alias cdot='cd ${DOT_PATH}'
+
 function c.va.td(){
     installed=`mktemp`
     wanted=`mktemp`
@@ -55,10 +63,6 @@ docker.status(){ # TODO: faire un script avec bash simple curses
     echo
     echo "containers"
     docker container ls
-}
-installe_chrysalis(){
-    wget  https://github.com/keyboardio/Chrysalis/releases/download/v0.11.0/Chrysalis-0.11.0.AppImage -O ~/bin/chrysalis
-    chmod +x ~/bin/chrysalis
 }
 # sdkman
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
